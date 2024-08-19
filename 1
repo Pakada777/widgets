@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ff80a6;
+		}
+
+		.border {
+			border: 0px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #ea1a68;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border background">
+		<a id="Home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house" style="color: #ffffff;"></i> Home</a>
+		<a id="Calender" onclick="navigate(this.id)" href="#"> <i class="fa-regular fa-calendar" style="color: #ffffff;"></i> Calender</a>
+		<a id="Tasks" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list-check" style="color: #ffffff;"></i> Tasks</a>
+		<a id="Work" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase" style="color: #ffffff;"></i> Work</a>
+		<a id="Mood Board" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-thumbtack" style="color: #ffffff;"></i> Mood Board</a>
+		
+	
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'Home')
+				window.open("https://www.notion.so/BOARD-15bd237d054b44c5ba15ad2624a393ee?pvs=4", '_parent').focus();
+			else if (id == "Calender")
+				window.open("https://www.notion.so/Calendrier-1a984623428c4756bcb425bfa8aea1f6?pvs=4", '_parent').focus();
+			else if (id == "Tasks")
+				window.open("https://www.notion.so/taches-ff5cd58095fc420ca3561bcfe746ff91?pvs=4", '_parent').focus();
+			else if (id == "Work")
+				window.open("https://www.notion.so/Cours-b59cdb8296c7461f966d6130171f7e25?pvs=4", '_parent').focus();
+			else if (id == "Mood Board")
+				window.open("https://www.notion.so/mood-board-a73ec93b97594b3285d4ec7e6c5a9f8d?pvs=4", '_parent').focus();
+			
+
+		}
+	</script>
+
+
+</body>
+
+</html>
